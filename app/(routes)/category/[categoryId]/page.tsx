@@ -11,7 +11,7 @@ import Filter from "./components/filter"
 
 export const revalidate = 0
 
-interface CategoryPAgeProps {
+interface CategoryPageProps {
   params: {
     categoryId: string
   }
@@ -21,7 +21,7 @@ interface CategoryPAgeProps {
   }
 }
 
-const CategoryPage: React.FC<CategoryPAgeProps> = async ({ params, searchParams }) => {
+const CategoryPage: React.FC<CategoryPageProps> = async ({ params, searchParams }) => {
   const products = await getProducts({
     categoryId: params.categoryId,
     colorId: searchParams.colorId,
